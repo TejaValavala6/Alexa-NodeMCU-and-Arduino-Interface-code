@@ -1,18 +1,19 @@
 # Alexa-NodeMCU-and-Arduino-Interface-code
-Use this code to interface the alexa and nodeMCU and Arduino. You have to dump this code in ESP8266 (NodeMCU) in order to interface these three components.
+# Use this code to interface the alexa and nodeMCU and Arduino. You have to dump this code in ESP8266 (NodeMCU) in order to interface these three components.
+
 //NODEMCU_CODE
 
-#include<SoftwareSerial.h> //Included SoftwareSerial Library
-SoftwareSerial s(12,13); // This function is used to interface the nodeMCU and Arduino Due in order to send and recieve the data
+#include<SoftwareSerial.h>   //Included SoftwareSerial Library
+SoftwareSerial s(12,13);    // This function is used to interface the nodeMCU and Arduino Due in order to send and recieve the data
 #ifdef ARDUINO_ARCH_ESP32
 #include<WiFi.h>  
 #else
-#include<ESP8266WiFi.h> //This Header file is used to connect the ESP8266 to the WIFI
+#include<ESP8266WiFi.h>     //This Header file is used to connect the ESP8266 to the WIFI
 #endif
 
-#include<Espalexa.h> //This Header File is uused to interface the Alexa and ESP8266
+#include<Espalexa.h>    //This Header File is uused to interface the Alexa and ESP8266
 
-boolean connectWifi(); //Boolean function used to know whether the wifi is successfully connected or not
+boolean connectWifi();   //Boolean function used to know whether the wifi is successfully connected or not
 
 //CALL BACK FUNCTIONS
 void patientCondition(uint8_t value);
@@ -20,7 +21,7 @@ void patientTemperature(uint8_t value);
 void patientPulse(uint8_t value);
 
 //DECLARING WIFI NAME AND PASSWORD
-const char *ssid =  "Satya@";     // replace with your wifi ssid and wpa2 key
+const char *ssid =  "Satya@";         // replace with your wifi ssid and wpa2 key
 const char *password =  "satya815";
 
 
