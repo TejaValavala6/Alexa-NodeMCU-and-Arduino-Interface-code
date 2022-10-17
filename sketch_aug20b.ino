@@ -1,4 +1,3 @@
-
 //NODEMCU_CODE
 
 #include<SoftwareSerial.h> //Included SoftwareSerial Library
